@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        async
+      ></script>
 
+      <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1260,40 +1275,57 @@
     <header>
         <div class="geometric-decoration"></div>
         <div class="container">
-            <h1>Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO</h1>
+            <h1>POLARIS: Projection-Orthogonal Least Squares for Robust and Adaptive
+                Inversion in Diffusion Models</h1>
             <div class="author-list-header">
                 <a href="https://donahowe.github.io/" target="_blank" class="author-link">
-                    <span>Junhao Cheng<sup>1,†</sup>, </span>
+                    <span>Wenshuo Chen<sup>1*</sup>, </span>
                 </a>
                 <a href="https://liang-hou.github.io/" target="_blank" class="author-link">
-                    <span>Liang Hou<sup>2</sup>, </span>
+                    <span>Haosen Li<sup>1*</sup>, </span>
                 </a>
                 <a href="https://www.xtao.website/" target="_blank" class="author-link">
-                    <span>Xin Tao<sup>2</sup>, </span>
+                    <span>Shaofeng Liang<sup>1*</sup>, </span>
                 </a>
                 <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
-                    <span>Jing Liao<sup>1</sup></span>
+                    <span>Lei Wang<sup>2,3</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                    <span>Haozhe Jia<sup>1</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                    <span>Kaishen Yuan<sup>1</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                    <span>Jiemin Wu<sup>1</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                    <span>Bowen Tian<sup>1</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                    <span>Yutao Yue<sup>1</sup></span>
                 </a>
             </div>
             <div class="affiliations-header">
-                <span><sup>1</sup>City University of Hong Kong</span><br>
-                <span><sup>2</sup>Kling Team, Kuaishou Technology</span><br>
-                <span>†This work was conducted during the author's internship at Kling Team, Kuaishou Technology</span>
+                <span><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span><br>
+                <span><sup>2</sup>Griffith University</span><br>
+                <span><sup>3</sup>Data61/CSIRO</span><br>
+                <span>*Equal Contribution</span>
             </div>
             <div class="external-links">
-                <a href="https://arxiv.org/abs/2511.16669" class="external-link" target="_blank">
+                <a href="https://github.com/Chatonz/POLARIS" class="external-link" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1.99 6H7V7h10.01v2zm0 4H7v-2h10.01v2zm-3 4H7v-2h7.01v2z"/>
                     </svg>
                     <span>Paper</span>
                 </a>
-                <a href="https://github.com/KlingTeam/VANS" class="external-link" target="_blank">
+                <a href="https://github.com/Chatonz/POLARIS" class="external-link" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                     </svg>
                     <span>Code</span>
                 </a>
-                <a href="https://huggingface.co/KlingTeam/VANS" class="external-link" target="_blank">
+                <a href="https://github.com/Chatonz/POLARIS" class="external-link" target="_blank">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 013 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15z"/>
                     </svg>
@@ -1315,40 +1347,48 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <p>While language models have become impactful in many real-world applications, video generation remains largely confined to entertainment. Motivated by video's inherent capacity to demonstrate physical-world information that is difficult to convey through language alone (e.g., imagine teaching someone to tie a tie using only text), we identify an underutilized opportunity to extend video as a new answer modality for Next-Event Prediction (NEP), formalized as <b>Video-Next-Event Prediction (VNEP)</b>. While the established NEP task takes a video with a procedural or predictive question as input to predict the next event in text, VNEP requires dynamic video responses. This shift from telling to showing unlocks more intuitive and customized answers for procedural learning and creative exploration. However, this task remains challenging for existing models, as it demands an understanding of multimodal input, instruction-conditioned reasoning, and the generation of video with visual and semantic consistency. To address this, we introduce <b>VANS</b>, a model that leverages reinforcement learning to align a Vision-Language Model (VLM) with a Video Diffusion Model (VDM) for VNEP. The core of VANS is our proposed <b>Joint-GRPO</b> that orchestrates the VLM and VDM to function as a unit. Driven by a shared reward on their respective output, it optimizes the VLM to produce captions that are both accurate and friendly to visualize, while guiding the VDM to generate videos that are faithful to these captions and the input visual context. To enable this learning, we craft <b>VANS-Data-100K</b>, a dedicated dataset for the VNEP task. Experiments on procedural and predictive benchmarks demonstrate that VANS achieves state-of-the-art performance in both video event prediction and visualization.</p>
+                    <p>The Inversion-Denoising Paradigm, which is based on diffusion models, excels in diverse image editing and restoration tasks.
+                         We revisit its mechanism and reveal a critical, overlooked factor in reconstruction degradation: </b>the approximate noise error</b>
+                . This error stems from approximating the noise at step $t$ with the prediction at step $t\!-\!1$, resulting in severe error accumulation throughout the inversion process. We introduce Projection-Orthogonal Least Squares for Robust and Adaptive Inversion (POLARIS), which reformulates inversion from an error-compensation problem into an error-origin problem. Rather than optimizing embeddings or latent codes to offset accumulated drift, POLARIS treats the guidance scale $\omega$ as a step-wise variable and derives a mathematically grounded formula to minimize inversion error at each step. Remarkably, POLARIS improves inversion latent quality with just one line of code. With negligible performance overhead, it substantially mitigates noise approximation errors and consistently improves the accuracy of downstream tasks.</p>
                 </section>
                 
-                <section id="Dataset" class="data section">
+                <!-- <section id="Dataset" class="data section">
                     <h2>VANS-Data-100K Dataset</h2>
                     <div class="teaser-image-container" style="text-align: center; ">
                         <img src="images/data.png" alt="AnimeShooter Teaser" class="teaser-image" style="transform: scale(1.2); display: inline-block;">
                     </div>
                     <p>
-                        We construct <b>VANS-Data-100K</b>, a comprehensive dataset specifically designed for Video-Next-Event Prediction (VNEP), 
-                        comprising <b>30K procedural</b> and <b>70K predictive</b> samples. Each sample contains an input video, instructional question, 
-                        and multi-modal answer (text and video), addressing the limitations of existing NEP datasets in video quality and question diversity.
-                    </p>
-                </section>
+                        The Inversion-Denoising Paradigm, which is based on diffusion models, excels in diverse image editing and restoration tasks.
+                        We revisit its mechanism and reveal a critical, overlooked factor in reconstruction degradation:
+                        <strong>the approximate noise error</strong>.
+                        This error stems from approximating the noise at step $t$ with the prediction at step $t\!-\!1$, resulting in severe error accumulation throughout the inversion process.
+                        We introduce Projection-Orthogonal Least Squares for Robust and Adaptive Inversion (POLARIS), which reformulates inversion from an error-compensation problem into an error-origin problem.
+                        Rather than optimizing embeddings or latent codes to offset accumulated drift, POLARIS treats the guidance scale $\omega$ as a step-wise variable and derives a mathematically grounded formula to minimize inversion error at each step.
+                        Remarkably, POLARIS improves inversion latent quality with just one line of code.
+                        With negligible performance overhead, it substantially mitigates noise approximation errors and consistently improves the accuracy of downstream tasks.
+                      </p>
+                </section> -->
 
                 <section id="method" class="method section">
-                    <h2>VANS Model</h2>
-                    
+                    <h2>POLARIS Method</h2>
+
                     <div class="method-content">
-                        <!-- 图片部分：并排显示两张图 -->
-                        <div class="method-figures-row">
-                            <div class="method-figure-wrapper">
-                                <div class="method-figure">
-                                    <img src="images/model.png" alt="VANS Architecture" class="method-image vans-image">
-                                    <p class="figure-caption">Overall architecture of VANS: Dual-path processing with VLM for reasoning and VDM for video generation, conditioned on both semantic captions and visual context.</p>
-                                </div>
-                            </div>
+                        <div class="method-full">
+                            <img src="images/Polaris.png" alt="POLARIS architecture" class="method-image-full" />
+                            <p class="figure-caption"> (A) Existing CFG-based DDIM methods introduce and accumulate errors at each step of the inversion process, eventually leading
+                                to the distribution shift of downstream tasks. (B) Our method actively seeks a mathematically invertible path to obtain a latent variable that
+                                is closer to the ideal one. During generation, the recorded ωt sequence is replayed, enabling high-fidelity reconstruction. (C) Shows our
+                                optimization goal from a geometric point of view to minimize the inversion error.</p>
+                                <!-- </div> -->
+                          </div>
+                    </div>
                             
-                            <div class="method-figure-wrapper">
+                            <!-- <div class="method-figure-wrapper">
                                 <div class="method-figure">
                                     <img src="images/grpo.png" alt="Joint-GRPO Comparison" class="method-image grpo-image">
                                     <p class="figure-caption">Joint-GRPO: Two-stage co-steering optimization that bridges the semantic-to-visual gap between VLM and VDM.</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                 
                         <!-- 文字描述部分 -->
