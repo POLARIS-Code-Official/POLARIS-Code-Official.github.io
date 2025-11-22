@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Polaris-Official.github.io
 
 Polaris Paper 的宣传站点源码，使用静态 HTML/CSS 构建，可直接部署到 GitHub Pages。
@@ -19,3 +20,6 @@ python3 -m http.server 8000
 - `images/` & `videos/`：展示用素材
 
 欢迎基于此仓库定制你的 Polaris 项目介绍。
+=======
+# Page.github.io
+>>>>>>> origin/main
