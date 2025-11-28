@@ -852,6 +852,45 @@
             }
         }
 
+        .editing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .editing-card {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .editing-card.active {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-medium);
+        }
+
+        #editingPlayer .expanded-video {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        #editingPlayer video {
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+        }
+
+        .downstream-video-wrapper {
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+        }
+
+        .downstream-video-wrapper video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
         .question-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -1278,31 +1317,31 @@
             <h1>POLARIS: Projection-Orthogonal Least Squares for Robust and Adaptive
                 Inversion in Diffusion Models</h1>
             <div class="author-list-header">
-                <a href="https://donahowe.github.io/" target="_blank" class="author-link">
+                <a href="https://chatonz.github.io/" target="_blank" class="author-link">
                     <span>Wenshuo Chen<sup>1*</sup>, </span>
                 </a>
-                <a href="https://liang-hou.github.io/" target="_blank" class="author-link">
+                <a href="https://openreview.net/profile?id=~Haosen_Li2" target="_blank" class="author-link">
                     <span>Haosen Li<sup>1*</sup>, </span>
                 </a>
-                <a href="https://www.xtao.website/" target="_blank" class="author-link">
+                <a href="https://dblp.org/pid/397/1364.html" target="_blank" class="author-link">
                     <span>Shaofeng Liang<sup>1*</sup>, </span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://leiwangr.github.io/" target="_blank" class="author-link">
                     <span>Lei Wang<sup>2,3</sup></span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://scholar.google.com/citations?user=xKAJ2nkAAAAJ&hl=zh-CN" target="_blank" class="author-link">
                     <span>Haozhe Jia<sup>1</sup></span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://yuankaishen2001.github.io/Kkkkkkyle/" target="_blank" class="author-link">
                     <span>Kaishen Yuan<sup>1</sup></span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://scholar.google.com/citations?user=INre9KUAAAAJ&hl=zh-CN" target="_blank" class="author-link">
                     <span>Jiemin Wu<sup>1</sup></span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://scholar.google.com/citations?user=SwhX3JkAAAAJ&hl=zh-CN" target="_blank" class="author-link">
                     <span>Bowen Tian<sup>1</sup></span>
                 </a>
-                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en" target="_blank" class="author-link">
+                <a href="https://yutaoyue.github.io/" target="_blank" class="author-link">
                     <span>Yutao Yue<sup>1</sup></span>
                 </a>
             </div>
@@ -1339,7 +1378,7 @@
         <main class="main-content-area">
             <div class="container">
                 
-                <section id="abstract" class="abstract section">
+                <!-- <section id="abstract" class="abstract section">
                     <h2>Abstract</h2>
                     <div class="teaser-image-container" style="text-align: center; ">
                         <video class="teaser-image" autoplay muted loop playsinline style="transform: scale(1.2); display: inline-block; max-width: 100%; height: auto;">
@@ -1350,7 +1389,26 @@
                     <p>The Inversion-Denoising Paradigm, which is based on diffusion models, excels in diverse image editing and restoration tasks.
                          We revisit its mechanism and reveal a critical, overlooked factor in reconstruction degradation: </b>the approximate noise error</b>
                 . This error stems from approximating the noise at step $t$ with the prediction at step $t\!-\!1$, resulting in severe error accumulation throughout the inversion process. We introduce Projection-Orthogonal Least Squares for Robust and Adaptive Inversion (POLARIS), which reformulates inversion from an error-compensation problem into an error-origin problem. Rather than optimizing embeddings or latent codes to offset accumulated drift, POLARIS treats the guidance scale $\omega$ as a step-wise variable and derives a mathematically grounded formula to minimize inversion error at each step. Remarkably, POLARIS improves inversion latent quality with just one line of code. With negligible performance overhead, it substantially mitigates noise approximation errors and consistently improves the accuracy of downstream tasks.</p>
-                </section>
+                </section> -->
+
+                <div class="teaser-video-grid">
+                    <div class="teaser-video-item">
+                        <video class="teaser-sync-video" autoplay muted playsinline>
+                            <source src="videos/tease1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="teaser-video-item">
+                        <video class="teaser-sync-video" autoplay muted playsinline>
+                            <source src="videos/tease2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                <p>The Inversion-Denoising Paradigm, which is based on diffusion models, excels in diverse image editing and restoration tasks.
+                    We revisit its mechanism and reveal a critical, overlooked factor in reconstruction degradation: </b>the approximate noise error</b>
+           . This error stems from approximating the noise at step $t$ with the prediction at step $t\!-\!1$, resulting in severe error accumulation throughout the inversion process. We introduce Projection-Orthogonal Least Squares for Robust and Adaptive Inversion (POLARIS), which reformulates inversion from an error-compensation problem into an error-origin problem. Rather than optimizing embeddings or latent codes to offset accumulated drift, POLARIS treats the guidance scale $\omega$ as a step-wise variable and derives a mathematically grounded formula to minimize inversion error at each step. Remarkably, POLARIS improves inversion latent quality with just one line of code. With negligible performance overhead, it substantially mitigates noise approximation errors and consistently improves the accuracy of downstream tasks.</p>
                 
                 <!-- <section id="Dataset" class="data section">
                     <h2>VANS-Data-100K Dataset</h2>
@@ -1374,7 +1432,10 @@
 
                     <div class="method-content">
                         <div class="method-full">
-                            <img src="images/Polaris.png" alt="POLARIS architecture" class="method-image-full" />
+                            <video class="method-video-full" controls autoplay muted playsinline data-loop="false">
+                                <source src="videos/Method.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <p class="figure-caption"> (A) Existing CFG-based DDIM methods introduce and accumulate errors at each step of the inversion process, eventually leading
                                 to the distribution shift of downstream tasks. (B) Our method actively seeks a mathematically invertible path to obtain a latent variable that
                                 is closer to the ideal one. During generation, the recorded ωt sequence is replayed, enabling high-fidelity reconstruction. (C) Shows our
@@ -1394,27 +1455,17 @@
                         <!-- 文字描述部分 -->
                         <div class="method-description">
                             <div class="method-challenge">
-                                <h3>Architecture Design & Challenge</h3>
+                                <h3>Position of our work</h3>
                                 <p>
-                                    Our proposed <b>VANS</b> processes input videos and questions through a dual-path architecture: the VLM performs instruction-grounded reasoning 
-                                    to generate textual captions describing predicted next events, while the VDM synthesizes videos conditioned on both these 
-                                    semantic guides and low-level visual cues from input frames.
+                                    POLARIS reframes inversion from an error-compensation problem to an error-origin problem.
+                                    Instead of optimizing embeddings or latents to counteract drift, we treat the guidance scale as a step-wise variable and derive a mathematically grounded rule that minimizes inversion error at each step.
+                                    Concretely, we obtain a closed-form, per-timestep scale from an orthogonality condition between conditional/unconditional noise-change vectors, yielding a robust, plug-and-play dynamic schedule that can be dropped into standard DDIM inversion.
+                                    POLARIS is thus complementary to prior pipelines: it preserves their modularity while replacing a brittle, fixed hyperparameter with an adaptive, theoretically justified control law.
                                 </p>
-                                <p>
-                                    However, this design faces a fundamental limitation: <b>the VLM and VDM are optimized in isolation</b>. The VLM is trained 
-                                    for textual accuracy but receives no feedback on whether its descriptions lead to visually plausible videos. Conversely, 
-                                    the VDM faces the challenge of coordinating two conditioning signals: the VLM's specific caption and the input's visual 
-                                    context. While SFT equips the VDM with basic capabilities, achieving consistent performance on both semantic accuracy 
-                                    and visual fidelity requires further refinement.
-                                </p>
-                                <p>
-                                    This disconnect creates a <i>semantic-to-visual gap</i> where both models operate without awareness of each other's 
-                                    constraints and capabilities. To resolve this, we introduce <b>Joint-GRPO</b> to orchestrate the two models into a 
-                                    cohesive unit for VNEP.
-                                </p>
+
                             </div>
                             
-                            <div class="method-solution">
+                            <!-- <div class="method-solution">
                                 <h3>Joint-GRPO: Bridging the Semantic-Visual Gap</h3>
                                 <p>
                                     Joint-GRPO coordinates the VLM and VDM using a joint reward function through structured two-stage optimization, 
@@ -1440,60 +1491,43 @@
                                     Through this two-stage optimization, the VLM and VDM co-evolve into a synergistic unit, effectively bridging the 
                                     semantic-to-visual gap and enabling high-quality Video-Next-Event Prediction.
                                 </p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
                 
-                <section id="procedural" class="section">
-                    <div class="section-title">
-                        <h2>Qualitative Comparison on Procedural Questions</h2>
-                        <p class="subtitle">Click on a question to view the input video and corresponding answers</p>
-                    </div>
 
-                    <div class="question-grid" id="proceduralQuestions">
-                    </div>
-
-                    <div id="expandedProceduralView" class="expanded-question hidden fade-in">
-                    </div>
-                </section>
-
-                <section id="predictive" class="section">
-                    <div class="section-title">
-                        <h2>Qualitative Comparison on Predictive Questions</h2>
-                        <p class="subtitle">Click on a question to view the input video and corresponding answers</p>
-                    </div>
-
-                    <div class="question-grid" id="predictiveQuestions">
-                    </div>
-
-                    <div id="expandedPredictiveView" class="expanded-question hidden fade-in">
-                    </div>
-                </section>
-
-                <section id="generalization" class="section">
-                    <div class="section-title">
-                        <h2>Generalization on Multi-Future Prediction</h2>
-                        <p class="subtitle">Same input video with different questions leads to different future prediction</p>
-                    </div>
                 
-                    <div class="generalization-grid" id="generalizationGrid">
+                <section id="editing" class="section">
+                    <div class="section-title">
+                        <h2>Qualitative Comparison on Editing Task</h2>
+                        <p class="subtitle">Click on an example to watch the editing result</p>
                     </div>
-                
-                    <div id="expandedGeneralizationView" class="expanded-generalization hidden fade-in">
+
+                    <div class="question-grid editing-grid" id="editingButtons">
+                        <div class="question-card editing-card" data-video="videos/editing/1.mp4">Example 1</div>
+                        <div class="question-card editing-card" data-video="videos/editing/2.mp4">Example 2</div>
+                        <div class="question-card editing-card" data-video="videos/editing/3.mp4">Example 3</div>
+                        <div class="question-card editing-card" data-video="videos/editing/4.mp4">Example 4</div>
+                        <div class="question-card editing-card" data-video="videos/editing/5.mp4">Example 5</div>
+                        <div class="question-card editing-card" data-video="videos/editing/6.mp4">Example 6</div>
+                        <div class="question-card editing-card" data-video="videos/editing/7.mp4">Example 7</div>
+                        <div class="question-card editing-card" data-video="videos/editing/8.mp4">Example 8</div>
                     </div>
+
+                    <div id="editingPlayer" class="expanded-question hidden fade-in"></div>
                 </section>
 
-                <section id="image-to-video" class="section">
+                <section id="downstream-visualization" class="section">
                     <div class="section-title">
-                        <h2>Generalization on Reasoning Image-to-Video Generation</h2>
-                        <p class="subtitle">Comparison on UI2V-Bench benchmark for reasoning image-to-video generation</p>
+                        <h2>Visualization of Other Downstream Tasks</h2>
                     </div>
 
-                    <div class="i2v-grid" id="i2vGrid">
-                    </div>
-
-                    <div id="expandedI2VView" class="expanded-i2v hidden fade-in">
+                    <div class="downstream-video-wrapper">
+                        <video controls playsinline muted data-loop="false">
+                            <source src="videos/other.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </section>
 
@@ -1501,12 +1535,7 @@
                     <div class="container is-max-desktop content">
                         <h2 class="title">Citation</h2>
                         <div class="citation-container">
-                            <pre><code id="citation-code">@misc{cheng2025videoasanswer,
-    title  =  {Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO},
-    author =  {Cheng, Junhao and Hou, Liang and Tao, Xin and Liao, Jing},
-    year   =  {2025},
-    url    =  {https://arxiv.org/abs/2511.16669}
-}</code></pre>
+                            <pre><code id="citation-code">None</code></pre>
                             <button class="copy-button" id="copy-btn" title="Copy to clipboard">
                                 <svg class="copy-icon" viewBox="0 0 24 24">
                                     <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
@@ -1519,6 +1548,7 @@
                 
                 <section id="acknowledgement" class="acknowledgement section">
                     <h2>Acknowledgement</h2>
+
                     
                     <div class="acknowledgement-content">
                         <p>
@@ -1581,281 +1611,74 @@
             }
         });
 
-        const questionData = {
-            procedural: [
-                {
-                    id: 'proce_1',
-                    question: "Show me the next step for baked chicken Parmesan.",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[think]Given that the chicken parmesan has been breaded and fried, the next logical step in the baking process would be to remove it from the pan and place it in a preheated oven at the correct temperature.[/think][Ans]Remove the chicken parmesan from the pan with tongs and transfer it to an oven-safe dish. Place the dish in the preheated oven at 350°F (175°C) for 20-25 minutes, or until the chicken is golden brown and cooked through.[/Ans]",
-                        "Omni-Video": "[think]The video shows the cutlets have been fried and initially sauced in the pan. The described next step is to transfer them to a plate and add more sauce.[Ans]A person uses tongs to transfer the two sauced cutlets from the pan onto a clean plate, then spoons additional red sauce over them.",
-                        "Ours (SFT)": "[Think]The input video shows that the cutlets have been fried and are now being sauced in the pan. In typical recipes like chicken parmesan, after applying the sauce, the next step is to add cheese before baking. Therefore, the most logical subsequent action is to sprinkle cheese over the sauced cutlets.[/Think][Ans]A hand adding shredded mozzarella cheese over two breaded cutlets that are covered with red sauce in a frying pan.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The cooking video shows two breaded chicken cutlets that have been fried to a golden brown and are now coated with tomato sauce in the pan. Based on standard culinary preparation for chicken parmesan, the logical progression after applying the sauce would be to add a layer of cheese before the baking process. This step allows the cheese to melt and create the characteristic cheesy crust during the final baking stage.[/Think][Ans]A hand carefully sprinkling a generous amount of shredded mozzarella cheese over two breaded chicken cutlets that are fully coated with tomato sauce in a frying pan.[/Ans]",
-                        "Ground Truth": "[Think]The user is making chicken parmesan. Based on the video content, the user has just finished drizzling tomato sauce over the fried chicken cutlets. The standard procedure for making chicken parmesan involves topping the sauce with cheese and then baking or melting the cheese. Therefore, the next logical step is to add mozzarella cheese.[/Think][Ans]A hand is showering shredded mozzarella cheese over two breaded chicken cutlets coated with tomato sauce in a skillet.[/Ans]"
-                    }
-                },
-                {
-                    id: 'proce_2', 
-                    question: "Hi, I want to make slime. What should I do next?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]The user wants to make slime and is asking for the next step. I need to provide a common, initial step in the slime-making process. The most fundamental first step after gathering ingredients is usually to pour the main ingredient, which is glue, into a container. I will assume they have their ingredients ready, and the very next action is to start mixing them in a bowl. Therefore, pouring glue into a bowl is the logical next step.[Ans]The next step is to pour the clear or white school glue into a mixing bowl. Make sure to use a bowl that is big enough to comfortably mix all the ingredients with a spoon.",
-                        "Omni-Video": "[think]The user is currently performing the 'MakeSlime' task. Based on the video content provided (though not visible in this instruction), it can be inferred that the user has completed adding the required components (water and detergent) into the container. According to standard procedures for making slime, after mixing these ingredients, the next step is typically to add additional liquid or a specific component to adjust the consistency or texture. This could involve adding more water, a foaming agent, or a liquid with gel-like properties like glue or cornstarch syrup to achieve the desired consistency. Therefore, the most logical next action is to add water.[/think][caption]A person is holding a yellow cup filled with water, about to pour it into a red plastic basin containing a white foam-like substance.[/caption]",
-                        "Ours (SFT)": "[Think]The user's initial video showed the preparation of a white liquid base in a red container, representing the foundational step in slime-making. After adding various ingredients including activators and colorants, the mixture now requires thorough mechanical agitation. This mixing phase is critical as it initiates the chemical reaction that transforms the liquid components into a cohesive, viscous slime through polymerization. The stirring action helps distribute the activator evenly while developing the characteristic slime texture.[/Think][Ans]A hand stirring a metal spoon through a thick mixture in a red plastic basin, pulling and folding the substance as it transitions from liquid to a cohesive slime that begins to pull away from the container's sides.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The user's initial video shows 'hands pouring white liquid from one container into a red basin, with a small amount of foam at the bottom and shimmering light on the liquid's surface.' This is typically the first step in making slime, preparing the base liquid (like glue). Integrate User's Completed Steps: The user states they have completed ''add different kinds of ingredients', 'add different kinds of ingredients'' after the initial video. This indicates that the user has already added two or more different components to the base liquid. These could include activators (like borax solution, contact lens solution) or other additives. Deduce Next Step: After adding all the base ingredients and active components, the standard procedure for making slime is to mix them thoroughly to allow them to react and form a viscous slime. Therefore, 'mix the raw materials' is the most logical next step immediately following ingredient addition.[/Think][Ans]In the scene, one hand is using a metal spoon to stir colored pigments within the white liquid in a red plastic basin. Blue, red, and black pigments are mixing with the white liquid, forming marbled textures and swirling patterns.[/Ans]",
-                        "Ground Truth": "[Think]The user's initial video depicted the preparation of a white liquid base in a red container, representing the first step in slime-making. Having since added various ingredients—likely including activators and colorants—the process now requires proper mixing. This crucial step ensures all components react completely to transform the mixture into the desired slime consistency.[/Think][Ans]A hand vigorously stirring a metal spoon inside a red plastic basin, thoroughly blending blue and red color pigments into the white liquid base as swirling, marbled patterns begin to form throughout the mixture.[/Ans]"
-                    }
-                },
-                {
-                    id: 'proce_3',
-                    question: "Hey AI assistant, I'm making a paper windmill and just uploaded a video. What should I do next?",
-                    answers: {
-                        "Video-GPT": "Not applicable",                        
-                        "Genmini-FilmWeaver": "[Think]The user is making a paper windmill and wants to know the next step. Since I don't have access to the video, I need to predict the most logical next step based on the typical sequence of making a paper windmill.Here's a standard sequence:1.  Start with a square piece of paper.2.  Fold it diagonally to find the center and create creases.3.  Cut along these diagonal creases *from each corner towards the center*, but stop before reaching the absolute center (leaving a small circle or square in the middle uncut).4.  **Bring alternating cut corners to the center.** (This is a very common and crucial next step after cutting).5.  Fasten all the brought-in corners and the center point together (usually with a pushpin, thumbtack, or a paper fastener).6.  Attach the windmill to a stick or straw.Given the phrase 'just uploaded a video,' it's highly probable that the video shows the paper *after* it has been cut (step 3). Therefore, the most immediate and common next step would be step 4: bringing the alternating corners to the center to form the blades.[Ans]Take one of the four cut corners, skip the next one, and bring the subsequent cut corner to the center. Repeat this for the remaining two corners. You will end up with four corners brought to the center, overlapping slightly, ready for fastening.[/Ans]",
-                        "Omni-Video": "[think]The person has completed folding the pink paper into a windmill shape. The scissors are still present on the table, suggesting that they were used in the process. The person's hands are adorned with bracelets, which adds a personal touch to the scene. Given the context, the next logical step would be to secure or stabilize the windmill structure.[Caption]The person adjusts the folded paper windmill to ensure it is stable and secure, using their hands to make minor adjustments.",
-                        "Ours (SFT)": "[Think]The user has finished making the paper pinwheel body. Since pinwheels need a handle to function, the next step should be attaching a stick to the back.[/Think][Ans]A hand attaching a wooden stick to the back of a pink paper pinwheel.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The user has completed the main folding process of the paper pinwheel, forming its distinctive wind-catching structure. Since pinwheels are designed to spin and be handheld, they require a stable handle for practical use. The most common approach is to attach a stick to the pinwheel's center back, allowing it to rotate freely while being held. Therefore, the next logical step should be securing a stick to the back of the pinwheel assembly.[/Think][Ans]One hand carefully positions a wooden stick against the back of a pink paper pinwheel while the other hand secures it in place, with partially visible crafting tools and paper scraps on the work surface around them.[/Ans]",
-                        "Ground Truth": "[Think]The user is currently performing the MakePaperWindMill task and has uploaded an initial video. Based on the video description, the user's hands are folding corners of the pink paper towards the center, which is clearly the initial step in making a paper windmill, and the 'body' of the windmill has been preliminarily formed. For a complete paper windmill, the next step is typically to attach the finished paper windmill to a support so it can spin. Therefore, it is inferred that the user's next operation should be 'fix the wind mill on the bracket'.[/Think][Ans]A pair of hands is shown fixing a pink paper windmill onto a wooden stick, with a purple cloth in the background and a pink rectangular piece of paper on the right.[/Ans]"
-                    }
-                },
-                {
-                    id: 'proce_4',
-                    question: "Hi, I'm making Samosa and just uploaded a video. What should I do next?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]Based on the uploaded video, the user seems to be preparing a type of food involving vegetables and some form of coating.1.The visual shows vegetable pieces being dipped into a thick, creamy mixture2.The vegetables are then manually shaped into conical forms3.This preparation method resembles various stuffed pastry dishes from different cuisines4.In many culinary traditions, vegetable fillings are typically enclosed in some form of dough wrapper before cooking5.The conical shape suggests the final product might be triangular or cone-shape6.Therefore, the next step would likely involve preparing and adding some form of pastry or dough component to encase the vegetable filling.[/Think][Ans]A person's hands working with vegetable mixture and dough pieces on a wooden surface, preparing to combine them while surrounded by various cooking ingredients and utensils.[/Ans]",
-                        "Omni-Video": "[Think]The user is making Samosa. Based on the video content, it can be inferred that the user has just completed the step of filling the potato mixture into the pastry cone. In the standard samosa making process, after filling the ingredients, the next step is usually to seal the edges of the pastry to form the triangular samosa shape. Therefore, the next logical step is to seal the edges of the pastry.[/Think][Ans]Hands are pinching together the edges of the semicircular pastry to form a triangular samosa shape, with a speckled kitchen countertop in the background.[/Ans]",
-                        "Ours (SFT)": "[Think]The user is preparing samosas and has shared an initial video showing vegetable filling being shaped into cones after batter dipping. This confirms the filling preparation is complete. In traditional samosa making, after preparing the cone-shaped filling, the next essential step is preparing the dough wrapper. The characteristic triangular shape of samosas requires specifically rolled dough pieces. Therefore, the logical next step should be rolling out triangular dough wrappers to accommodate the cone-shaped filling.[/Think][Ans]A hand rolling out dough into thin triangular shapes on a floured surface, preparing wrappers for the samosa filling.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The user is in the process of making Samosas, as evidenced by the initial video showing vegetable filling being dipped in batter and shaped into cones. This indicates the filling preparation stage is complete. In traditional Samosa preparation, the subsequent critical step involves enclosing the filling with dough. The pastry wrapping not only contains the filling but also creates the characteristic crispy texture when fried. Therefore, the most logical progression is to wrap the vegetable cone in a layer of buttered dough to form the final Samosa shape.[/Think][Ans]A pair of hands carefully wrapping a vegetable-filled cone in thin, buttered dough on a floral-patterned countertop, with excess dough being folded to create the classic triangular Samosa shape.[/Ans]",
-                        "Ground Truth": "[Think]The user is making Samosa. Based on the video content, it can be inferred that the user has just completed the step of filling the potato mixture into the pastry cone. In the standard samosa making process, after filling the ingredients, the next step is usually to seal the edges of the pastry to form the triangular samosa shape. Therefore, the next logical step is to seal the edges of the pastry.[/Think][Ans]Hands are pinching together the edges of the semicircular pastry to form a triangular samosa shape, with a speckled kitchen countertop in the background.[/Ans]"
-                    }
-                },
-                {
-                    id: 'proce_5',
-                    question: "My bike tire is flat. What should I do next?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]The user reports having a flat bike tire and is seeking guidance on the next step. This represents a common maintenance scenario requiring sequential problem-solving. While a complete tire repair might involve multiple stages, the most immediate and practical intervention for a flat tire is to attempt reinflation. This initial approach serves as both a diagnostic measure and potential quick solution, as some tires may simply have slow leaks that can be temporarily addressed through inflation. Therefore, the most logical first response would be to use a pump and add air to the tire.[/Think][Ans]You should use a bicycle pump to add air to the flat tire. This may temporarily resolve the issue or help identify if there is a more serious problem that requires further repair.[/Ans]",
-                        "Omni-Video": "[think]The person in the video is performing the first step of fixing a flat bicycle tire, which involves removing the valve core pin from the valve stem. This is likely part of the process to remove the inner tube and replace it with a new one or repair it.[answer]The person will use a tool (likely a valve core remover) to push the core out of the valve stem, which allows access to the inner tube for deflation or replacement.[/answer]",
-                        "Ours (SFT)": "[Think]The user is engaged in bicycle tire maintenance, with the video focusing on the valve stem area. The visible interaction with the valve suggests either recent installation or inspection work has been completed. In standard bicycle repair procedures, any valve-related service is typically followed by pressure restoration to make the tire operational. Since the valve serves as the entry point for air, and the tire appears deflated, the necessary subsequent action involves using a pump to reinflate it to the recommended pressure level.[/Think][Ans]A close-up shot of a hand firmly pressing a bicycle pump's nozzle onto the tire valve stem, with partial view of the deflated tire in the background, preparing to initiate the inflation process.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]Based on the user's description of replacing a bicycle tire valve stem, the initial video provides important context. We can see a hand securing the valve stem cap onto a bicycle tire against a clean white background. This visual evidence strongly suggests that the core replacement work has been successfully completed, as the cap is typically the final component to be installed. Now that the new valve stem is in place, the bicycle tire remains uninflated and non-functional. In standard bicycle maintenance procedures, the critical step following valve stem replacement is immediately reinflating the tire to restore proper pressure and functionality. The logical progression from this point would naturally involve using a pump to inflate the tire through the newly installed valve stem.[/Think][Ans]A close-up view of a hand firmly attaching a bicycle pump's nozzle to the freshly replaced valve stem, positioned against a softly blurred white background, ready to begin the inflation process.[/Ans]",
-                        "Ground Truth": "[Think]The user explicitly states they are performing the 'ReplaceTyreValveStem' operation. The initial video content shows a hand unscrewing a valve stem cap attached to a bicycle tire, on a white background. This strongly suggests the user has either completed the removal of the old valve stem or the installation of the new one, and is in the process of re-securing the valve cap, or is at an intermediate stage of installation. Considering the primary purpose of replacing a valve stem is to enable proper tire inflation, and the immediate next task after replacement is to restore tire pressure. Therefore, the most logical next step is to inflate the tire. The 'ideal state description after completing this operation' – 'a hand is shown connecting the nozzle of a pump to the valve stem of the bicycle tire, with a blurred white background' – confirms that inflating the tire is the expected next action.[/Think][Ans]A hand is shown connecting the nozzle of a pump to the valve stem of the bicycle tire, with a blurred white background.[/Ans]"
-                    }
-                }
-            ],
-            predictive: [
-                {
-                    id: 'predict_1',
-                    question: "What will the sitting man do if he is irritable?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]The user is asking what the man, who is currently sitting at a table and using a laptop, would do if he becomes irritable. I need to consider common behaviors associated with irritability in this context. Observe the man's current activity: He is focused on his laptop, seemingly working or browsing. Consider what causes irritability in such a setting: This could be frustration with his work, something he's seeing on the screen, or dissatisfaction with progress. Predict irritable behaviors: Verbal expression: The most direct manifestation would be verbal complaints. He might mutter criticisms about the task, express dissatisfaction aloud, or complain about the situation to himself. Facial and body language: This would be accompanied by a frown, shaking his head, or making dismissive hand gestures. Object interaction: He might gesture toward the laptop screen in a frustrated manner while complaining. Given that he is alone and engaged with the laptop, his irritability would most naturally be expressed through verbal complaints directed at the device or the task at hand, combined with supporting frustrated body language. [Ans] If the man becomes irritable, he will likely start complaining aloud. He might frown at the laptop screen and make a frustrated hand gesture while muttering criticisms about his work or the device. He could shake his head in disapproval and let out an audible sigh of exasperation, clearly voicing his annoyance.[/Ans]",
-                        "Omni-Video": "[think]The video shows a heated discussion between two individuals. When conflicts escalate between an agitated speaker and an irritable listener, verbal confrontations can quickly turn physical. The seated man's visible irritation would likely manifest in sudden aggressive actions, leading to immediate physical retaliation against the standing speaker.[/think][Ans]The seated man suddenly stands up and throws a punch at the standing man, triggering a physical fight between the two individuals.[/Ans]",
-                        "Ours (SFT)": "[Think]The video depicts a formal setting with a standing interviewer and a seated candidate in a suit. In a high-pressure interview situation, an irritable candidate who becomes frustrated with the questions might direct his anger toward the perceived source of evaluation. Instead of responding to the interviewer, he would likely vent his frustration by addressing the recording camera, treating it as a symbolic representation of the judging panel.[/Think][Ans]The man in a suit turns toward the camera and shouts angrily, his face showing intense frustration as he directs his outburst at the lens.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The video shows a standing man speaking animatedly to a seated man in a suit. When an irritable person is addressed in this manner, they are unlikely to remain silent. Instead, they would typically interrupt with a loud verbal response, expressing their frustration through raised voice and aggressive tone while directing their anger toward the speaker.[/Think][Ans]The seated man in a black suit shouts back angrily, his face contorted in frustration as he raises his voice at the standing speaker.[/Ans]",
-                        "Ground Truth": "[Think]The input video shows a standing man speaking animatedly with gestures to a seated man wearing glasses. When an agitated speaker addresses a listener who possesses an irritable temperament, the listener is unlikely to remain passive. Instead of continuing to listen quietly, an irritable person would typically interrupt or respond immediately with heightened emotional intensity. The seated man would likely raise his voice, use sharp gestures, and display clear facial expressions of anger or frustration as he counters the standing man's points.[/Think][Ans]A man in a black suit shouting back angrily with tense facial expressions and aggressive hand gestures.[/Ans]"
-                    }
-                },
-                {
-                    id: 'predict_2',
-                    question: "what she'll probably do next?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]The initial video clearly shows a woman in a bedroom setting, using a hammer to install a new nail into the wall.Upon closer observation, there is already a framed painting securely hung on another part of the same wall, indicating the space is in a state of ongoing decoration.In interior design, it is a common practice to arrange multiple artworks on a single wall to create a curated gallery wall or a balanced compositional layout.The user's action of adding a new nail, while an existing painting is already present, logically points towards the intention of expanding the current display.Therefore, the most probable next step is that she will hang an additional painting alongside the existing one, rather than replacing it or performing an unrelated action.[/Think][Ans]A woman carefully hangs a new framed painting on the freshly installed nail, positioning it beside the previously hung artwork to create a balanced pair of decorations on the bedroom wall.",
-                        "Omni-Video": "[think] The woman has been using the hammer to remove a piece of wood or paneling from the wall. She is now standing in front of the wall with the hammer in her right hand, indicating that she may be planning to continue removing more panels or taking apart the wall structure. Based on this, it seems likely that she will either continue removing panels or use the hammer to break up a section of the wall.[caption]The woman continues to hold the hammer up to the wall while looking at it.",
-                        "Ours (SFT)": "[Think]The video shows a woman hammering a nail into her bedroom wall, a common preparation step for hanging artwork. After securing the nail, the natural progression would be to verify if the painting is ready to be displayed. This typically involves lifting the frame to assess its positioning against the wall and visually evaluating how it will look in the intended space before final hanging.[/Think][Ans]A woman lifts a framed painting with both hands, holding it up against the wall to examine its placement and appearance.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The video depicts a woman in a bedroom environment using a hammer to drive a nail into the wall. This activity aligns with standard home decoration procedures where wall-mounted fixtures require secure anchoring points. The careful, measured hammer strikes suggest she is creating a precise mounting point rather than performing construction work. Given the residential context and the use of a single nail, this most likely serves as the foundation for displaying a picture frame or decorative wall art. After successfully installing the nail, the subsequent action would involve methodically placing the artwork onto the mounting hardware, verifying its stability, and making fine adjustments to achieve perfect alignment and visual balance within the room's décor scheme.[/Think][Ans]A woman gently positions a medium-sized framed painting onto the newly installed wall nail, using both hands to carefully adjust its placement until perfectly level.[/Ans]",
-                        "Ground Truth": "[Think]The input video shows the lady performing a preparatory action, which is fixing a nail into the wall. Based on inferring the purpose of this action, nailing is typically done to hang an item. Therefore, after completing the step of fixing the nail, the lady is most likely to retrieve an item and hang it on the nail to complete the intended task.[/Think][/Ans]The woman hangs a framed picture (or photo) on the freshly nailed nail on the wall.[Ans]"
-                    }
-                },
-                {
-                    id: 'predict_3',
-                    question: "This girl encountered a harasser. How will she bravely defend herself?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[think]Based on the visual information provided in the video clip, it appears that the young woman is in a public restroom with a somewhat tense atmosphere suggested by her posture and the setting. Given the instruction about her encountering a harasser and needing to defend herself, we can infer that the next scene would likely involve her facing off against an unseen aggressor. However, since the video does not show any direct action or interaction with another person, the next event could be her preparing for self-defense, perhaps by gathering courage or finding a means to confront the harasser.[caption]The young woman takes a deep breath, preparing herself mentally for what may come next as she stands poised in the restroom, readying herself to face whatever challenges lie ahead. The camera focuses on her determined expression, highlighting her resolve to stand up for herself. This scene sets the stage for her potential confrontation with the harasser.[/caption]",
-                        "Omni-Video": "[Think]The video shows a woman in a sailor suit standing in a corridor. If she were to encounter a harasser, her most immediate and instinctive reaction would likely be to ensure her own safety by creating distance. This self-preservation instinct would naturally lead her to quickly turn and run away from the potential threat.[/Think][Ans]The woman in a sailor suit suddenly turns around with a panicked expression and runs quickly down the corridor.[/Ans]",
-                        "Ours (SFT)": "[think] The scene depicts a young woman in a red, white, and blue uniform walking confidently through a hallway. Given her attire and demeanor, it seems she might be a performer or part of an entertainment team. The presence of a man in a suit suggests he could be a potential threat or a spectator. The hallway setting indicates she might be moving towards a performance area or venue. Based on these points, she might use her surroundings effectively:- If there are other people around (e.g., security staff), they can provide immediate support.- She can use her confidence and presence to intimidate the potential threat, making it less likely that she would confront him directly.- If she feels threatened, she could use her environment to her advantage, perhaps blocking him with her body or using any available objects like furniture or props.Given these considerations, she may choose to:- Move into a more populated area where others can assist her.- Use her environment to her advantage, creating a barrier if needed.- Maintain her composure and use her confidence to deter him.[Ans] She decides to move into a more populated area and use her confidence to deter the potential threat.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The input video shows a woman in a sailor suit standing alone in a corridor, facing the camera with an alert posture. Considering the scenario where she encounters a harasser, the logical behavioral sequence would be: Threat Recognition: Her initial attentive stance would shift to one of fear and alarm upon perceiving a threat. Self-defense Priority: In such situations, personal safety becomes the immediate concern. A common and recommended self-defense measure, especially for individuals who may carry them, is the use of deterrents like pepper spray Proactive Defense: Rather than waiting passively, a proactive response would be to quickly retrieve the defensive tool and ready it against the perceived threat. Therefore, the most logical action sequence is for her to display fear and prepare to use a self-defense tool.[/Think][Ans]The woman in a sailor uniform, with a frightened expression, quickly takes a pepper spray out of her bag and raises it in a defensive stance.[/Ans]",
-                        "Ground Truth": "[Think]The video shows a woman in a sailor suit standing alertly in a corridor. If confronted by a harasser, her natural reaction would be to feel threatened and take defensive action. A logical protective measure would be to retrieve and ready a self-defense tool like pepper spray from her bag.[/Think][Ans]The woman in a sailor uniform looks frightened and pulls out pepper spray from her bag, holding it up defensively.[/Ans]"
-                    }
-                },
-                {
-                    id: 'predict_4',
-                    question: "What will she do after 15 minutes?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[think]Based on the context provided, it appears that the person in the video is applying a facial mask. Given that the question asks about what will happen after 15 minutes, it is reasonable to infer that the mask needs time to work effectively before being removed. Therefore, the next logical step would be for her to wait for the recommended duration and then proceed to remove the mask.[/think][caption]She will wait for 15 minutes and then remove the mask from her face.[/caption]",
-                        "Omni-Video": "[think]The input video shows a woman applying a black substance to her face. Given the even application and dark pigmentation, this appears to be a cosmetic procedure for artificial tanning or theatrical makeup rather than a skincare mask. In makeup applications, after laying the base color, the next step typically involves using specialized tools to refine the application. Therefore, after completing the initial coating, she would likely continue with a makeup brush to blend and perfect the cosmetic effect.[/think][Ans]The woman picks up a makeup brush to continue blending and refining the black cosmetic product on her face.[/Ans]",
-                        "Ours (SFT)": "[think]The input video shows a woman applying a black mask to her face. After allowing the mask to work for 15 minutes, she would naturally want to check the results in a mirror before proceeding to remove it. Since this appears to be a rinse-off mask rather than a peel-off type, the proper removal method would involve washing with water to completely cleanse the residue from her skin.[/think][Ans]The woman admires her skin, then begins washing her face with water to remove the mask.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The input video depicts a woman in the process of applying a black adhesive mask to her facial skin. This specific type of cosmetic treatment is designed to dry and form a cohesive film that mechanically extracts impurities from pores when removed. The temporal cue 'after 15 minutes' corresponds precisely to the recommended drying duration for such peel-off masks to achieve optimal adhesion and efficacy. Unlike rinse-off clay masks that require washing, the fundamental mechanism of this product necessitates complete drying followed by physical peeling. Therefore, the most logically consistent subsequent action would involve carefully detaching the fully cured mask from the facial surface to complete the deep cleansing procedure.[/Think][Ans]The woman carefully grips the edge of the completely dried black mask and begins peeling it upward from her chin, gradually revealing the cleansed skin underneath.[/Ans]",
-                        "Ground Truth": "[Think]The user is documenting a blackhead removal process using glue. The uploaded video shows a woman who has just finished applying a black mask evenly across her face. In such beauty treatments, the mask requires sufficient drying time to effectively adhere to and extract impurities from the skin. Given that 15 minutes is a standard drying period for most peel-off masks, the most logical action after this time would be to carefully remove the dried mask by peeling it off, which would complete the blackhead extraction process.[/Think][Ans]Fifteen minutes later, the woman begins carefully peeling off the completely dried black mask from her forehead, slowly pulling it downward to reveal the cleaned skin beneath.[/Ans]"
-                    }
-                },
-                {
-                    id: 'predict_5',
-                    question: "If there's nothing outside, what would she do?",
-                    answers: {
-                        "Video-GPT": "Not applicable",
-                        "Genmini-FilmWeaver": "[Think]The initial video shows a young woman peeking out from behind a partially open door, her body language indicating clear vigilance through tense shoulders, cautious movements, and focused observation. From a behavioral psychology perspective, this type of watchful observation typically stems from a need to assess environmental safety. When continuous monitoring confirms no potential threats, an individual's defensive posture naturally diminishes. After confirming the safety of the environment outside the door, the person's cognitive assessment shifts from 'potential danger' to 'environmental safety,' leading to corresponding behavioral adjustments. Based on behavioral continuity principles, the natural sequence of actions following the conclusion of observation should include: relaxation of facial muscles, turning the body toward the interior, normalization of gait, and shifting attention away from the doorway. Considering the door's symbolic significance as a spatial boundary, moving away from the doorway area represents a transition from a 'boundary monitoring' state to returning to 'normal indoor activity.'[/Think][Ans]The woman's vigilant expression gradually softens into one of relief as she concludes her observation. She deliberately turns her body away from the door, her shoulder tension visibly easing as she takes a few calm steps back into the room, her attention shifting inward as she moves away from the doorway.[/Ans]",
-                        "Omni-Video": "[think]The person in the video appears to be inside a building, possibly approaching a door labeled '4'. Given the context, it seems plausible that the individual might be entering or exiting this location. However, without more information about her intentions or the environment outside, it's speculative to determine her exact actions. If there's nothing outside, the most likely scenario would be that she continues her current activity or remains stationary. She could be waiting for someone or something, checking her phone, or simply observing her surroundings. In the absence of additional context, we can only speculate about her next actions based on common human behavior in such situations. For example, if she were waiting for someone, she might continue to stand in the doorway, possibly looking around or checking her watch.[/Think][Ans]The person stands at the doorway, contemplating her next move.[/Ans]",
-                        "Ours (SFT)": "[Think]The input video captures a woman in a clear state of cautious observation, peering through a partially opened doorway with visible vigilance in her expression and methodical scanning movements. This behavioral presentation indicates an active threat assessment process. When such careful examination yields no evidence of danger, the psychological and physiological response typically follows a predictable pattern: the initial hyper-alert state gradually subsides, muscle tension decreases, and the individual transitions from defensive monitoring to normal behavior. The most natural progression in this scenario would be to conclude the surveillance and reorient her attention inward, moving away from the doorway as the perceived need for vigilance diminishes.[/Think][Ans]The woman's tense expression softens into one of relief as she concludes her observation. She deliberately turns her body away from the doorway, her shoulders relaxing visibly as she shifts her focus back to the interior space.[/Ans]",
-                        "Ours (Joint-GRPO)": "[Think]The input video depicts a woman exhibiting cautious behavior as she peers from behind a partially opened door, her facial expression showing clear vigilance and her eyes systematically scanning the external environment. This behavioral pattern suggests she is assessing potential risks or investigating suspicious circumstances. According to psychological and behavioral studies, when an individual engages in threat assessment and finds no evidence of danger after thorough observation, their heightened state of alertness naturally diminishes. The absence of visible threats would logically lead to cognitive reassessment, resulting in decreased anxiety and the decision to terminate the protective behavior. Furthermore, the door serves as both a physical and psychological boundary - closing it represents restoring security and returning to normal activity. Therefore, upon confirming the absence of any external threat, the most probable behavioral sequence would be: gradual relaxation of facial tension, followed by the deliberate action of closing the door and resuming indoor activities.[/Think][Ans]The woman turns around, slowly closes the door until it clicks shut, her posture visibly more relaxed.[/Ans]",
-                        "Ground Truth": "[Think]The input video shows a woman cautiously peeking out from behind a door with a vigilant expression, carefully observing the area outside. Based on common behavioral logic, when someone is in a state of alert observation and finds no unusual presence or threat after examination, their tension typically eases. In such a scenario, the most reasonable action would be to end the observation, retreat to safety, and close the door to resume normal activity. Therefore, if she sees nothing outside, she would likely relax her vigilance and close the door to return indoors.[/Think][Ans]After confirming there is nothing outside, the woman relaxes her expression, closes the door, and turns back into the room.[/Ans]"
-                    }
-                }
-            ]
-        };
 
-        const generalizationData = [
-            {
-                id: 'gen_1',
-                questions: [
-                    "What is her reaction if she gets burned?",
-                    "What is her reaction if she gets burned in an exaggerated movie?",
-                    "What is her reaction if she eats something spicy in an exaggerated movie?",
-                ],
-                answers: ["con1.mp4", "con2.mp4", "con3.mp4"]
-            },
-            {
-                id: 'gen_2',
-                questions: [
-                    "Show her reaction if she sees her grandson.",
-                    "Show her reaction if she sees her husband.",
-                    "Show her reaction if she sees the personification of death.",
-                ],
-                answers: ["con1.mp4", "con2.mp4", "con3.mp4"]
-            },
-            {
-                id: 'gen_3',
-                questions: [
-                    "If this message is from her best friend, what will she do?",
-                    "If the girl herself doesn't pass the exam, what will she do?",
-                    "If this message is from her rival in love, how will she react?",
-                ],
-                answers: ["con1.mp4", "con2.mp4", "con3.mp4"]
-            },
-            {
-                id: 'gen_4',
-                questions: [
-                    "How will he try to counterattack?",
-                    "If this man is not carrying a weapon, what is he most likely to do?",
-                    "What will happen if his counterattack fails?",
-                ],
-                answers: ["con1.mp4", "con2.mp4", "con3.mp4"]
-            }
-        ];
 
-        const i2vData = [
-            {
-                id: 'i2v_1',
-                question: "A strong wind blows by.",
-                answers: [
-                    { name: "Wan", file: "wan.mp4" },
-                    { name: "Qwen-Wan", file: "qwen_wan.mp4" },
-                    { name: "Gemini-Wan", file: "gemini_wan.mp4" },
-                    { name: "Ours", file: "ours.mp4" }
-                ]
-            },
-            {
-                id: 'i2v_2',
-                question: "Leave the bananas for a week.",
-                answers: [
-                    { name: "Wan", file: "wan.mp4" },
-                    { name: "Qwen-Wan", file: "qwen_wan.mp4" },
-                    { name: "Gemini-Wan", file: "gemini_wan.mp4" },
-                    { name: "Ours", file: "ours.mp4" }
-                ]
-            },
-            {
-                id: 'i2v_3',
-                question: "The man picks up the unused paper.",
-                answers: [
-                    { name: "Wan", file: "wan.mp4" },
-                    { name: "Qwen-Wan", file: "qwen_wan.mp4" },
-                    { name: "Gemini-Wan", file: "gemini_wan.mp4" },
-                    { name: "Ours", file: "ours.mp4" }
-                ]
-            },
-            {
-                id: 'i2v_4',
-                question: "Turn this off.",
-                answers: [
-                    { name: "Wan", file: "wan.mp4" },
-                    { name: "Qwen-Wan", file: "qwen_wan.mp4" },
-                    { name: "Gemini-Wan", file: "gemini_wan.mp4" },
-                    { name: "Ours", file: "ours.mp4" }
-                ]
-            }
-        ];
+        // function initializeI2VGrid() {
+        //     const grid = document.getElementById('i2vGrid');
+            
+        //     grid.innerHTML = '';
+            
+        //     i2vData.forEach((item, index) => {
+        //         const card = document.createElement('div');
+        //         card.className = 'i2v-card';
+        //         card.innerHTML = `
+        //             <p class="i2v-text">Case ${index + 1}</p>
+        //         `;
+        //         card.addEventListener('click', () => expandI2V(item, index));
+        //         grid.appendChild(card);
+        //     });
+        // }
 
-        function initializeI2VGrid() {
-            const grid = document.getElementById('i2vGrid');
+        // function expandI2V(item, index) {
+        //     const allCards = document.querySelectorAll('#i2vGrid .i2v-card');
+        //     allCards.forEach(card => card.classList.remove('active'));
             
-            grid.innerHTML = '';
+        //     event.currentTarget.classList.add('active');
             
-            i2vData.forEach((item, index) => {
-                const card = document.createElement('div');
-                card.className = 'i2v-card';
-                card.innerHTML = `
-                    <p class="i2v-text">Case ${index + 1}</p>
-                `;
-                card.addEventListener('click', () => expandI2V(item, index));
-                grid.appendChild(card);
-            });
-        }
-
-        function expandI2V(item, index) {
-            const allCards = document.querySelectorAll('#i2vGrid .i2v-card');
-            allCards.forEach(card => card.classList.remove('active'));
+        //     const expandedView = document.getElementById('expandedI2VView');
             
-            event.currentTarget.classList.add('active');
+        //     let answersHTML = '';
+        //     item.answers.forEach((answer) => {
+        //         const videoPath = `videos/${item.id}/${answer.file}`;
+        //         answersHTML += `
+        //             <div class="i2v-answer-card">
+        //                 <div class="i2v-method-name">${answer.name}</div>
+        //                 <div class="i2v-video-container" onclick="openVideoModal('${videoPath}', '${answer.name} - Case ${index + 1}')">
+        //                     <video class="i2v-video" autoplay muted loop playsinline>
+        //                         <source src="${videoPath}" type="video/mp4">
+        //                         Your browser does not support the video tag.
+        //                     </video>
+        //                 </div>
+        //             </div>
+        //         `;
+        //     });
             
-            const expandedView = document.getElementById('expandedI2VView');
+        //     expandedView.innerHTML = `
+        //         <div class="i2v-content">
+        //             <div class="i2v-image-container" onclick="openImageModal('videos/${item.id}/input.png', 'Input Image - Case ${index + 1}')">
+        //                 <img src="videos/${item.id}/input.png" alt="Input Image" class="i2v-image">
+        //             </div>
+        //             <div class="i2v-question">
+        //                 <h4>Question</h4>
+        //                 <p>${item.question}</p>
+        //             </div>
+        //         </div>
+        //         <div class="i2v-answers-section">
+        //             <h3>Generated Videos</h3>
+        //             <div class="i2v-answers-grid">
+        //                 ${answersHTML}
+        //             </div>
+        //         </div>
+        //     `;
             
-            let answersHTML = '';
-            item.answers.forEach((answer) => {
-                const videoPath = `videos/${item.id}/${answer.file}`;
-                answersHTML += `
-                    <div class="i2v-answer-card">
-                        <div class="i2v-method-name">${answer.name}</div>
-                        <div class="i2v-video-container" onclick="openVideoModal('${videoPath}', '${answer.name} - Case ${index + 1}')">
-                            <video class="i2v-video" autoplay muted loop playsinline>
-                                <source src="${videoPath}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                `;
-            });
+        //     expandedView.classList.remove('hidden');
+        //     expandedView.classList.add('fade-in');
             
-            expandedView.innerHTML = `
-                <div class="i2v-content">
-                    <div class="i2v-image-container" onclick="openImageModal('videos/${item.id}/input.png', 'Input Image - Case ${index + 1}')">
-                        <img src="videos/${item.id}/input.png" alt="Input Image" class="i2v-image">
-                    </div>
-                    <div class="i2v-question">
-                        <h4>Question</h4>
-                        <p>${item.question}</p>
-                    </div>
-                </div>
-                <div class="i2v-answers-section">
-                    <h3>Generated Videos</h3>
-                    <div class="i2v-answers-grid">
-                        ${answersHTML}
-                    </div>
-                </div>
-            `;
+        //     const subtitle = document.querySelector('#image-to-video .section-title .subtitle');
+        //     subtitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
             
-            expandedView.classList.remove('hidden');
-            expandedView.classList.add('fade-in');
-            
-            const subtitle = document.querySelector('#image-to-video .section-title .subtitle');
-            subtitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-            setupVideoControls();
-        }
+        //     setupVideoControls();
+        // }
 
         function openImageModal(imageSrc, title) {
             const imageModal = document.createElement('div');
@@ -1971,14 +1794,7 @@
             setupModalEvents();
         });
 
-        const methods = [
-            { name: "Video-GPT", file: "videogpt.mp4" },
-            { name: "Genmini-FilmWeaver", file: "gen_film.mp4" },
-            { name: "Omni-Video", file: "omnivideo.mp4" },
-            { name: "Ours (SFT)", file: "sft.mp4" },
-            { name: "Ours (Joint-GRPO)", file: "jointgrpo.mp4" },
-            { name: "Ground Truth", file: "gt.mp4" }
-        ];
+        document.addEventListener('DOMContentLoaded', setupEditingSection);
 
         const videoModal = document.getElementById('videoModal');
         const modalVideo = document.getElementById('modalVideo');
@@ -2025,6 +1841,49 @@
             modalVideo.src = '';
         }
 
+        function setupEditingSection() {
+            const buttons = document.querySelectorAll('.editing-card');
+            const player = document.getElementById('editingPlayer');
+
+            if (!buttons.length || !player) {
+                return;
+            }
+
+            const showVideo = (src) => {
+                player.innerHTML = `
+                    <div class="expanded-video video-fix">
+                        <video autoplay muted playsinline controls data-loop="false">
+                            <source src="${src}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+                player.classList.remove('hidden');
+                setupVideoControls();
+            };
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const videoSrc = button.dataset.video;
+                    if (videoSrc) {
+                        showVideo(videoSrc);
+                    }
+                });
+            });
+
+            const firstButton = buttons[0];
+            if (firstButton) {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                firstButton.classList.add('active');
+                const initialSrc = firstButton.dataset.video;
+                if (initialSrc) {
+                    showVideo(initialSrc);
+                }
+            }
+        }
+
         function initializeQuestionGrid(type) {
             const grid = document.getElementById(`${type}Questions`);
             const questions = questionData[type];
@@ -2050,47 +1909,12 @@
             
             const expandedView = document.getElementById(`expanded${type.charAt(0).toUpperCase() + type.slice(1)}View`);
             
-            let answersHTML = '';
-            methods.forEach(method => {
-                const videoPath = `videos/${question.id}/${method.file}`;
-                const answerText = question.answers[method.name] || "Answer description not available.";
-                
-                answersHTML += `
-                    <div class="answer-card">
-                        <div class="method-name">${method.name}</div>
-                        <div class="answer-video-container video-fix" onclick="openVideoModal('${videoPath}', '${method.name}')">
-                            <video class="answer-video" autoplay muted loop playsinline>
-                                <source src="${videoPath}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="answer-text-container" onclick="toggleAnswerText(this)">
-                            <p class="answer-text-preview">${answerText}</p>
-                            <p class="answer-text-full">${answerText}</p>
-                            <button class="expand-text-btn">Show more</button>
-                        </div>
-                    </div>
-                `;
-            });
-            
             expandedView.innerHTML = `
-                <div class="expanded-content">
-                    <div class="expanded-video video-fix" onclick="openVideoModal('videos/${question.id}/input.mp4', 'Input Video - Question ${questionIndex + 1}')">
-                        <video autoplay muted loop playsinline>
-                            <source src="videos/${question.id}/input.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="expanded-question-text">
-                        <h4>Question ${questionIndex + 1}</h4>
-                        <p>${question.question}</p>
-                    </div>
-                </div>
-                <div class="answer-section">
-                    <h3>Generated Answers</h3>
-                    <div class="answers-grid">
-                        ${answersHTML}
-                    </div>
+                <div class="expanded-video video-fix" onclick="openVideoModal('videos/${question.id}/input.mp4', 'Input Video - Question ${questionIndex + 1}')">
+                    <video autoplay muted loop playsinline>
+                        <source src="videos/${question.id}/input.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             `;
                     
@@ -2098,25 +1922,73 @@
             expandedView.classList.add('fade-in');
 
             const subtitle = document.querySelector(`#${type} .section-title .subtitle`);
-            subtitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (subtitle) {
+                subtitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
 
             setupVideoControls();
         }
 
-        function toggleAnswerText(element) {
-            const card = element.closest('.answer-card');
-            card.classList.toggle('expanded');
-            const btn = card.querySelector('.expand-text-btn');
-            btn.textContent = card.classList.contains('expanded') ? 'Show less' : 'Show more';
+        function setupTeaserSync() {
+            const grids = document.querySelectorAll('.teaser-video-grid');
+            grids.forEach(grid => {
+                if (grid.dataset.syncAttached === 'true') {
+                    return;
+                }
+
+                const videos = Array.from(grid.querySelectorAll('video.teaser-sync-video'));
+                if (videos.length < 2) {
+                    grid.dataset.syncAttached = 'true';
+                    return;
+                }
+
+                const endedSet = new Set();
+
+                const restartGroup = () => {
+                    endedSet.clear();
+                    videos.forEach(video => {
+                        video.pause();
+                        video.currentTime = 0;
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(() => {});
+                        }
+                    });
+                };
+
+                videos.forEach((video, index) => {
+                    video.loop = false;
+                    video.addEventListener('ended', () => {
+                        endedSet.add(index);
+                        if (endedSet.size === videos.length) {
+                            setTimeout(restartGroup, 150);
+                        } else {
+                            video.pause();
+                        }
+                    });
+                });
+
+                grid.dataset.syncAttached = 'true';
+            });
         }
 
         function setupVideoControls() {
             const videos = document.querySelectorAll('video');
             videos.forEach(video => {
+                const isTeaserSyncVideo = video.classList.contains('teaser-sync-video');
+                const datasetLoop = video.dataset.loop;
+                
                 video.autoplay = true;
-                video.loop = true;
                 video.muted = true;
                 video.playsInline = true;
+
+                if (isTeaserSyncVideo) {
+                    video.loop = false;
+                } else if (datasetLoop !== undefined) {
+                    video.loop = datasetLoop === 'true';
+                } else {
+                    video.loop = true;
+                }
                 
                 video.addEventListener('play', function() {
                     if (this.parentElement.classList.contains('expanded-video')) {
@@ -2128,6 +2000,8 @@
                     }
                 });
             });
+
+            setupTeaserSync();
         }
 
         const sections = document.querySelectorAll('.section');

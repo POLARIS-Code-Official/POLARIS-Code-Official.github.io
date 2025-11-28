@@ -1094,3 +1094,40 @@ footer {
 .section#citation .container {
     padding: 0;
 }
+
+
+.method-full {
+    width: min(100%, 1400px);
+    margin: 0 auto;
+  }
+  
+.method-full .method-image-full {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.method-full .method-video-full {
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    border-radius: 16px;
+    background: #000;
+}
+
+  .teaser-video-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.teaser-video-item {
+    flex: 1 1 50%;
+    max-width: 560px;
+}
+
+.teaser-video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
